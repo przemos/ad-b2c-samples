@@ -4,13 +4,15 @@
   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
   xmlns="http://schemas.microsoft.com/online/cpim/schemas/2013/06"
   PolicySchemaVersion="0.3.0.0"
-  TenantId="yourtenant.onmicrosoft.com"
+  TenantId="testingmfalikeapro.onmicrosoft.com"
   PolicyId="B2C_1A_TOTP_TrustFrameworkExtensions"
-  PublicPolicyUri="http://yourtenant.onmicrosoft.com/B2C_1A_TOTP_TrustFrameworkExtensions">
+  PublicPolicyUri="http://testingmfalikeapro.onmicrosoft.com/B2C_1A_TOTP_TrustFrameworkExtensions"
+    DeploymentMode="Development"
+ UserJourneyRecorderEndpoint="urn:journeyrecorder:applicationinsights">
 
   <BasePolicy>
-    <TenantId>yourtenant.onmicrosoft.com</TenantId>
-    <PolicyId>B2C_1A_TrustFrameworkBase</PolicyId>
+    <TenantId>testingmfalikeapro.onmicrosoft.com</TenantId>
+    <PolicyId>B2C_1A_TOTP_TrustFrameworkBase</PolicyId>
   </BasePolicy>
   <BuildingBlocks>
     <ClaimsSchema>
@@ -50,9 +52,9 @@
       Note: the paged run JavaScript. Use custom or shared domain to allow running client side code -->
       <ContentDefinition Id="api.selfasserted.appfactor.registration">
         <!--<LoadUri>~/tenant/default/selfasserted.cshtml</LoadUri>-->
-        <LoadUri>https://your-app.azurewebsites.net/selfasserted-appfactor-registration.html</LoadUri>
+        <LoadUri>https://5acafddb.ngrok.io/selfasserted-appfactor-registration.html</LoadUri>
         <RecoveryUri>~/common/default_page_error.html</RecoveryUri>
-        <DataUri>urn:com:microsoft:aad:b2c:elements:selfasserted:1.1.0</DataUri>
+        <DataUri>urn:com:microsoft:aad:b2c:elements:contract:selfasserted:1.1.0</DataUri>
         <Metadata>
           <Item Key="DisplayName">App Factor</Item>
         </Metadata>
@@ -71,9 +73,10 @@
           <DisplayName>Generate TOTP Web Hook Azure Function</DisplayName>
           <Protocol Name="Proprietary" Handler="Web.TPEngine.Providers.RestfulProvider, Web.TPEngine, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
           <Metadata>
-            <Item Key="ServiceUrl">https://your-app.azurewebsites.net/api/identity/Generate</Item>
+            <Item Key="ServiceUrl">https://5acafddb.ngrok.io/api/identity/Generate</Item>
             <Item Key="AuthenticationType">None</Item>
             <Item Key="SendClaimsIn">Body</Item>
+            <Item Key="AllowInsecureAuthInProduction">true</Item>
           </Metadata>
           <InputClaims>
             <InputClaim ClaimTypeReferenceId="email" PartnerClaimType="userName" />
@@ -91,9 +94,11 @@
           <DisplayName>Verify TOTP Web Hook Azure Function</DisplayName>
           <Protocol Name="Proprietary" Handler="Web.TPEngine.Providers.RestfulProvider, Web.TPEngine, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
           <Metadata>
-            <Item Key="ServiceUrl">https://your-app.azurewebsites.net/api/identity/verify</Item>
+            <Item Key="ServiceUrl">https://5acafddb.ngrok.io/api/identity/verify</Item>
             <Item Key="AuthenticationType">None</Item>
             <Item Key="SendClaimsIn">Body</Item>
+            <Item Key="AllowInsecureAuthInProduction">true</Item>
+
           </Metadata>
           <InputClaims>
             <InputClaim ClaimTypeReferenceId="strongAuthenticationAppCode" PartnerClaimType="totpCode" />
@@ -117,8 +122,8 @@
                 For more information: https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-create-custom-attributes-profile-edit-custom 
                 Action required: Insert objectId and appId here -->
           <Metadata>
-            <Item Key="ApplicationObjectId">00000000-0000-0000-0000-000000000000</Item>
-            <Item Key="ClientId">00000000-0000-0000-0000-000000000000</Item>
+            <Item Key="ApplicationObjectId">ebe80e79-ff8a-4188-ba6e-e9e66cdbde2c</Item>
+            <Item Key="ClientId">ea7d26d0-197f-445c-849c-a0baeb27be0c</Item>
           </Metadata>
         </TechnicalProfile>
 
@@ -165,7 +170,7 @@
             <Item Key="ContentDefinitionReferenceId">api.selfasserted.appfactor.registration</Item>
           </Metadata>
           <CryptographicKeys>
-            <Key Id="issuer_secret" StorageReferenceId="B2C_1A_TokenSigningKeyContainer" />
+            <Key Id="TechnicalProfile" StorageReferenceId="B2C_1A_TokenSigningKeyContainer" />
           </CryptographicKeys>
           <InputClaims>
             <InputClaim ClaimTypeReferenceId="email" />
@@ -230,17 +235,17 @@
         <TechnicalProfile Id="login-NonInteractive">
           <Metadata>
             <!--Demo action required: Change to your ProxyIdentityExperienceFramework App Id-->
-            <Item Key="client_id">00000000-0000-0000-0000-000000000000</Item>
+            <Item Key="client_id">156ec76d-cb16-4bef-8001-84388ca04b38</Item>
 
             <!--Demo action required: Change to your IdentityExperienceFramework App Id-->
-            <Item Key="IdTokenAudience">00000000-0000-0000-0000-000000000000</Item>
+            <Item Key="IdTokenAudience">3766cf51-f09d-4ad8-86e8-427881fde3ef</Item>
           </Metadata>
           <InputClaims>
             <!--Demo action required: Change to your ProxyIdentityExperienceFramework App Id-->
-            <InputClaim ClaimTypeReferenceId="client_id" DefaultValue="00000000-0000-0000-0000-000000000000" />
+            <InputClaim ClaimTypeReferenceId="client_id" DefaultValue="156ec76d-cb16-4bef-8001-84388ca04b38" />
 
             <!--Demo action required: Change to your IdentityExperienceFramework App Id-->
-            <InputClaim ClaimTypeReferenceId="resource_id" PartnerClaimType="resource" DefaultValue="00000000-0000-0000-0000-000000000000" />
+            <InputClaim ClaimTypeReferenceId="resource_id" PartnerClaimType="resource" DefaultValue="3766cf51-f09d-4ad8-86e8-427881fde3ef" />
           </InputClaims>
         </TechnicalProfile>
       </TechnicalProfiles>

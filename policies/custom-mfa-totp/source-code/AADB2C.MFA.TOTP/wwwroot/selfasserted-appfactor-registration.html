@@ -1,6 +1,6 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-US">
+
 <head>
 
     <title>User details</title>
@@ -15,11 +15,15 @@
     <style id="common">
         @@charset "utf-8";
 
-        #panel, .pageLevel, .panel li, label {
+        #panel,
+        .pageLevel,
+        .panel li,
+        label {
             display: block
         }
 
-        button:disabled, button[disabled] {
+        button:disabled,
+        button[disabled] {
             background-color: #696969
         }
 
@@ -39,16 +43,20 @@
             color: #6d6d6d !important
         }
 
-        .accountButton, button {
+        .accountButton,
+        button {
             -moz-user-select: none;
             user-select: none
         }
 
-        .accountButton, a, button {
+        .accountButton,
+        a,
+        button {
             cursor: pointer
         }
 
-        h1, h2 {
+        h1,
+        h2 {
             font-weight: 400
         }
 
@@ -66,11 +74,14 @@
             background-color: #00abec
         }
 
-        .normaltext, .smalltext, .tinytext {
-            font-family: 'Segoe UI',Segoe,SegoeUI-Regular-final,Tahoma,Helvetica,Arial,sans-serif
+        .normaltext,
+        .smalltext,
+        .tinytext {
+            font-family: 'Segoe UI', Segoe, SegoeUI-Regular-final, Tahoma, Helvetica, Arial, sans-serif
         }
 
-        div#background_branding_container, div#background_page_overlay {
+        div#background_branding_container,
+        div#background_page_overlay {
             width: 100%;
             z-index: 0;
             position: fixed;
@@ -86,7 +97,9 @@
             animation: fadeIn 1s
         }
 
-        *, .panel, body {
+        *,
+        .panel,
+        body {
             margin: 0;
             padding: 0
         }
@@ -96,7 +109,11 @@
             z-index: -999
         }
 
-        .panel, .panel_layout, .panel_layout_row, body, html {
+        .panel,
+        .panel_layout,
+        .panel_layout_row,
+        body,
+        html {
             height: 100%
         }
 
@@ -110,9 +127,9 @@
             text-decoration: none
         }
 
-            a:hover {
-                text-decoration: underline
-            }
+        a:hover {
+            text-decoration: underline
+        }
 
         button {
             width: auto;
@@ -130,13 +147,13 @@
             padding: 0 2px
         }
 
-            button:hover {
-                background: #0F3E83;
-                border: 1px solid #3079ed;
-                -moz-box-shadow: 0 0 0;
-                -webkit-box-shadow: 0 0 0;
-                box-shadow: 0 0 0
-            }
+        button:hover {
+            background: #0F3E83;
+            border: 1px solid #3079ed;
+            -moz-box-shadow: 0 0 0;
+            -webkit-box-shadow: 0 0 0;
+            box-shadow: 0 0 0
+        }
 
         img {
             border: 0
@@ -155,7 +172,9 @@
             font-size: .9em
         }
 
-        input:focus, select:focus, textarea:focus {
+        input:focus,
+        select:focus,
+        textarea:focus {
             outline: 0
         }
 
@@ -198,7 +217,8 @@
             z-index: 1
         }
 
-        .accountButton, .accountButton:hover {
+        .accountButton,
+        .accountButton:hover {
             background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAh1BMVEX///9QUFBOTk5LS0tERERCQkI/Pz9ISEg6OjpGRkZNTU08PDyAgID09PSlpaWWlpZxcXFgYGBZWVlUVFT6+vrx8fHt7e3s7Ozo6Oji4uLJycnGxsa4uLiqqqqgoKCNjY2JiYmGhoZra2tmZmb7+/vu7u7d3d3U1NTNzc2+vr67u7usrKx7e3vprNQnAAAA8klEQVQ4y63Q127DMAxAUZpDwyMeSdqsNqu7/f/va6zahgGJKAr0vgk6DyQh+6V/BiTOOeNRA9zuAWBdM6WBlPDTvaUUoAuMrT0mgNvA1IJjQB3MKjACvp6DK0WAH+agtH8H9jQHLUUgz7Uhx8xOXzNESxirLCYA2mw8tacI5FyIYXq8A9ge2Qs6oTnw2e2ruho2rjBcXJ4ADh3jBOQLQnVhRFx2gNDZ4ACogbHXj/ft9Dj5AcgbJFu5AThQWuYBIGmgtAFQo4EFB+CPGthJAPypgY3BHsheA5UNwLyAvsYNoDyroKUe4EoFTQ/yDtTONvsGUJ8KTUYyH+UAAAAASUVORK5CYII=);
             background-repeat: no-repeat
         }
@@ -209,7 +229,9 @@
             width: 100%
         }
 
-        #panel_center, #panel_left, #panel_right {
+        #panel_center,
+        #panel_left,
+        #panel_right {
             display: inline-block;
             border: 0;
             height: 100%;
@@ -245,7 +267,10 @@
             height: 28px
         }
 
-        input[type=email], input[type=number], input[type=password], input[type=text] {
+        input[type=email],
+        input[type=number],
+        input[type=password],
+        input[type=text] {
             -moz-border-radius: 0;
             -webkit-border-radius: 0;
             border-radius: 0;
@@ -261,9 +286,12 @@
             margin-right: 3px
         }
 
-            input[type=email]:focus, input[type=number]:focus, input[type=password]:focus, input[type=text]:focus {
-                border: 1px solid #4d90fe
-            }
+        input[type=email]:focus,
+        input[type=number]:focus,
+        input[type=password]:focus,
+        input[type=text]:focus {
+            border: 1px solid #4d90fe
+        }
 
         .accountButton {
             border: 1px solid #FFF;
@@ -282,26 +310,26 @@
             background-color: #505050
         }
 
-            .accountButton:hover {
-                background-color: #B9B9B9;
-                border: 1px solid #FFF;
-                -moz-box-shadow: 0 0 0;
-                -webkit-box-shadow: 0 0 0;
-                box-shadow: 0 0 0
-            }
+        .accountButton:hover {
+            background-color: #B9B9B9;
+            border: 1px solid #FFF;
+            -moz-box-shadow: 0 0 0;
+            -webkit-box-shadow: 0 0 0;
+            box-shadow: 0 0 0
+        }
 
-            .accountButton:focus {
-                outline: gold solid 1px
-            }
+        .accountButton:focus {
+            outline: gold solid 1px
+        }
 
         #MicrosoftAccountExchange {
             background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAPFBMVEU1pe/////t+v4uoe5btvNixPVVwfUsoe9tyfXU7/y95vu24vrd9f5NtfLH6/ys3/o/sPE6qfD2/f+f2vnAysuQAAAAaElEQVQ4y93SORKAIAwFUEGCsoT1/nd1JkkDFhY24qt+8VMkk20lu6DAaVBOBsVKsuO8aYo08IqlYyxoRTQExfyKheRIgu5Yl4KoVhSUgNOhoiYRsmb5g2u+LtzXDNOhjKgoAZ9/8k8uZWsGqcIav5wAAAAASUVORK5CYII=);
             background-color: #33A7F2
         }
 
-            #MicrosoftAccountExchange:hover {
-                background-color: #ADDBF9
-            }
+        #MicrosoftAccountExchange:hover {
+            background-color: #ADDBF9
+        }
 
         #GoogleExchange {
             background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAhCAMAAACP+FljAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABOFBMVEX////62NXyi4Pual/rUEPqSz3tXlLyi4L5y8f86OfvcmjqQzXub2T85uT61dLrU0fvdWv86+nrT0LtX1PxgnnwgHfsXVHuaF398vHvdWnsWEv4xsL4wr7wenD+7sP0jRfqRjPsVkn85eT81mf7vAX3pQ7sUy/3ubT7xzH5uBj+/PyGsfjC1/v7vxP7yz9ChfSSuPiMtPj7xzDzwR78/fxel/VZlPWcv/n51GTVuBNOqki03r+vy/q60vv3672vtCI6qFA0qFNIsGTj8+jw9f5clvVDhfRrv4JLsWbC5cvY7t5gnt6Gsffp9exBrV5StGx4xY17xo9cuXU1pls9j8FNjPTo8P3S69lGr2JLoaPO3/zn9Opnvn5UtW7X7t3V7duCyZVeundCrl87q1lOs2l6xo+84sb9/v2qdWS0AAAAAWJLR0QAiAUdSAAAAAd0SU1FB+EIGQ4HDEDExrUAAADWSURBVDjLY2AYBZiAkYmZhZWNnQOHNCcXNxTw8GKT5+PnhgMBLPKCQiAZYRFRMW5ucQksCiSB0lLSIJaMLDZ5OXkFbkUlPB5QVlFVU8fnQw0VFU0tEEMbCnTQFOiqqOiBGfpQYEBIgSGaAiMVFWMTEMMUCMyACszRFFioWFpZwzg2QAW2aArs7B0cnZwhbBdXfX03F3RvuDs6Onp4glhe3kADfDD86esHVOHoHxAY5Bgcoh8ahhkS4RGOcBAZhS2somNg8rFxOIIzPiExKTklNS2dYaQBADviJWzWK7IJAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE3LTA4LTI1VDE0OjA3OjEyLTA0OjAwBQDEvwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNy0wOC0yNVQxNDowNzoxMi0wNDowMHRdfAMAAAAASUVORK5CYII=');
@@ -311,36 +339,36 @@
             color: #000000;
         }
 
-            #GoogleExchange:hover {
-                background-color: #EEEEEE;
-            }
+        #GoogleExchange:hover {
+            background-color: #EEEEEE;
+        }
 
         #TwitterExchange {
             background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAdVBMVEVgqd3///9Ypdtdp9xaptxSotpQodlNn9lWo9pUo9rX6Pa+2vGTw+iLvuZlqt79/P7K4PO62O+y0+6hyutysuD2+fzi7vne6/fT5PTE3fKs0O2lzeuZx+l7tuJqrd71+Pzz9vzn8PnQ4/SCueSAueNsrt9InNh7sQwBAAAAwklEQVQ4y92PRw6EMAwAXeIkdBbY3uv/n7gSAoLDD5hbPCPZgZVihEgYgNSUpmfS7bfbtHS2nReyL2Qoc+yp8ZRAwCEWjgGAPQ7sssKoAGsWBrrgyMZCwD77Uel+59E3Tt14xZ7qlY7BRf1CDgeMKMw8sBXGlKxWtLGvHCgkQ80m0YHpjjq4sQ74pn1mISLJVSAMiwJO98l/TWSNF1eGKzqKfZ7Vj0mnHHwodpP+WIYlZP373DTtVWxYr2FD3pOBdfIHhOAHYHQI9VgAAAAASUVORK5CYII=);
             background-color: #60A9DD
         }
 
-            #TwitterExchange:hover {
-                background-color: #BFDCF1
-            }
+        #TwitterExchange:hover {
+            background-color: #BFDCF1
+        }
 
         #FacebookExchange {
             background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAaVBMVEU7W5z///85Wps3WJsiRo8xU5fw8vYyUpY0VZiAj70pS5OBkb0vUpb7+fwsTpTR1ud6irllerBPaqX09fnx8vfs7fSQoMZxg7VsgLNGY6FCX58ZP4v++/7r7vTZ3OupstGIlsFWcalDYaCK3qwDAAAAnklEQVQ4y+XQyw7CIBAFUBgc5VUoWGtb3/7/RyoYkyZAiSsXvdt7kstA/hRg/B0GpZ6byQ3Dw0NBaH+lMYRle3T0kwayACRdBrr/gnN+QtpQWv8cR4DswiUAjozlz4RdF8AmlnmwjaDQImoZwQkRedoToUS7D+ColGoTwQidx8oEQDMHN1MBva5MOL70SCHuE1TOhOpHrRt0FWAOP4IX8PsG2qEOR30AAAAASUVORK5CYII=);
             background-color: #3B5B9C
         }
 
-            #FacebookExchange:hover {
-                background-color: #B0BDD7
-            }
+        #FacebookExchange:hover {
+            background-color: #B0BDD7
+        }
 
         #LinkedInExchange {
             background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAb1BMVEUAe7b///8AdrMklscAc7EAeLUAcbB5ttifzeMqmckAdLIAaqz7+/6PxeAShr0CgLkAba4nmMctksTv9Puw1eij0OWGvNtfrNJNo80YjMAeib/D4vGt3Oy82+yfzOOCvtyJvdx3tddirtI/ncoxmMj9KsrQAAAAw0lEQVQ4y9WSVw7DIAxAG8CkjJDVzO5x/zMWk0RNJaB/kfo+sGUeCMvstgI4J7F9aS5NxSLnTWLpZVDgexTqIiycUNBhgTxRyCKPYJ3dl7sITCkO+FyLXaWU310DscASOesf3ahWChGJ5cb4ASO5Joiu2EegWEmZa1c3yUwOHmHNuQgJup4CgF8YlKpcMhKvkNmb1REz6hdetsyziIBldv8lpH8ouGm28zQFCu2SOSAXlJYGYCgpFThEMFPm/zCryja8Acy7CRfMrcKPAAAAAElFTkSuQmCC);
             background-color: #0077B5
         }
 
-            #LinkedInExchange:hover {
-                background-color: #99CAE1
-            }
+        #LinkedInExchange:hover {
+            background-color: #99CAE1
+        }
 
         #AmazonExchange {
             background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/lwa/btnLWA_gold_156x32.png);
@@ -364,7 +392,8 @@
             }
         }
 
-        @@media only screen and (min-height:250px) and (max-width:450px),(min-device-height:250px) and (max-device-width:450px) {
+        @@media only screen and (min-height:250px) and (max-width:450px),
+        (min-device-height:250px) and (max-device-width:450px) {
             html {
                 overflow: hidden
             }
@@ -400,7 +429,8 @@
                 z-index: -999
             }
 
-            .panel_layout, .panel_layout_row {
+            .panel_layout,
+            .panel_layout_row {
                 width: 100%
             }
 
@@ -412,7 +442,8 @@
                 width: calc(100% - 80px)
             }
 
-            .inner_container, .panel {
+            .inner_container,
+            .panel {
                 width: 100%
             }
 
@@ -431,7 +462,8 @@
             }
         }
 
-        @@media only screen and (max-width:300px),(max-device-width:300px) {
+        @@media only screen and (max-width:300px),
+        (max-device-width:300px) {
             #panel_left {
                 width: 15px
             }
@@ -443,7 +475,8 @@
             display: none !important
         }
 
-        .intro, .tiny {
+        .intro,
+        .tiny {
             display: none
         }
 
@@ -459,38 +492,45 @@
             padding-top: 8px
         }
 
-            .attrEntry .error.itemLevel {
-                display: none;
-                color: #a61e0c;
-                font-size: .9em
-            }
+        .attrEntry .error.itemLevel {
+            display: none;
+            color: #a61e0c;
+            font-size: .9em
+        }
 
-            .attrEntry.validate .error.itemLevel.show, .attrEntry.validate .helpText.show, .helpText.show {
-                display: block
-            }
+        .attrEntry.validate .error.itemLevel.show,
+        .attrEntry.validate .helpText.show,
+        .helpText.show {
+            display: block
+        }
 
-            .attrEntry input:invalid {
-                outline: 0
-            }
+        .attrEntry input:invalid {
+            outline: 0
+        }
 
-            .attrEntry.validate input:invalid {
-                outline: #a61e0c solid 1px;
-                background-color: #fce8e8
-            }
+        .attrEntry.validate input:invalid {
+            outline: #a61e0c solid 1px;
+            background-color: #fce8e8
+        }
 
-            .attrEntry .helpText {
-                display: none;
-                padding-bottom: 10px;
-                padding-top: 10px;
-                color: #a61e0c;
-                font-size: .9em
-            }
+        .attrEntry .helpText {
+            display: none;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            color: #a61e0c;
+            font-size: .9em
+        }
 
         .pageLevel {
             width: calc(100% - 35px)
         }
 
-        .attrEntry input[type=text], .day, .dropdown_single, .month, .year, input[type=password] {
+        .attrEntry input[type=text],
+        .day,
+        .dropdown_single,
+        .month,
+        .year,
+        input[type=password] {
             -moz-border-radius: 0;
             -webkit-border-radius: 0;
             border-radius: 0;
@@ -526,14 +566,16 @@
             margin: 0 100px 0 0
         }
 
-        .attrEntry input[type=text], input[type=password], input[type=email] {
+        .attrEntry input[type=text],
+        input[type=password],
+        input[type=email] {
             width: calc(100% - 30px) !important;
             margin-right: 0 !important
         }
 
-            .attrEntry input[type=text]:focus {
-                border: 1px solid #6B6B6B
-            }
+        .attrEntry input[type=text]:focus {
+            border: 1px solid #6B6B6B
+        }
 
         .errorText {
             padding: 20px;
@@ -562,23 +604,25 @@
             font-size: 100%
         }
 
-            .buttons button:disabled, button[disabled] {
-                background-color: #696969
-            }
+        .buttons button:disabled,
+        button[disabled] {
+            background-color: #696969
+        }
 
-            .buttons button:hover {
-                background: #0F3E83;
-                border: 1px solid #FFF;
-                -moz-box-shadow: 0 0 0;
-                -webkit-box-shadow: 0 0 0;
-                box-shadow: 0 0 0
-            }
+        .buttons button:hover {
+            background: #0F3E83;
+            border: 1px solid #FFF;
+            -moz-box-shadow: 0 0 0;
+            -webkit-box-shadow: 0 0 0;
+            box-shadow: 0 0 0
+        }
 
         .button:focus {
             outline: gold solid 1px
         }
 
-        .alert-modal, .verifying-modal {
+        .alert-modal,
+        .verifying-modal {
             display: none
         }
 
@@ -586,15 +630,24 @@
             color: #fff;
             font-size: 24px;
             display: none;
-            font-family: 'Segoe UI',Segoe,SegoeUI-Regular-final,Tahoma,Helvetica,Arial,sans-serif
+            font-family: 'Segoe UI', Segoe, SegoeUI-Regular-final, Tahoma, Helvetica, Arial, sans-serif
         }
 
         @@-moz-document url-prefix() {
-            #AmazonExchange::-moz-focus-inner, #FacebookExchange::-moz-focus-inner, #GoogleExchange::-moz-focus-inner, #LinkedInExchange::-moz-focus-inner, #MicrosoftAccountExchange::-moz-focus-inner {
+
+            #AmazonExchange::-moz-focus-inner,
+            #FacebookExchange::-moz-focus-inner,
+            #GoogleExchange::-moz-focus-inner,
+            #LinkedInExchange::-moz-focus-inner,
+            #MicrosoftAccountExchange::-moz-focus-inner {
                 padding-left: 45px
             }
 
-            #AmazonExchange, #FacebookExchange, #GoogleExchange, #LinkedInExchange, #MicrosoftAccountExchange {
+            #AmazonExchange,
+            #FacebookExchange,
+            #GoogleExchange,
+            #LinkedInExchange,
+            #MicrosoftAccountExchange {
                 padding-left: 0
             }
         }
@@ -604,17 +657,22 @@
             font-weight: bold;
         }
 
-        label[for=strongAuthenticationAppQRCodeBitmap], #strongAuthenticationAppQRCodeBitmap {
+        label[for=strongAuthenticationAppQRCodeBitmap],
+        #strongAuthenticationAppQRCodeBitmap {
             display: none;
         }
     </style>
 
 </head>
+
 <body>
     <div id="background_branding_container">
-        <img id="background_background_image" src="https://login.microsoftonline.com/static/tenant/default/img/default_signin_illustration_optimized.png" alt="Illustration" />
+        <img id="background_background_image"
+            src="https://login.microsoftonline.com/static/tenant/default/img/default_signin_illustration_optimized.png"
+            alt="Illustration" />
     </div>
-    <p id="page_loaded_msg" role="alert" aria-live="assertive" tabindex="-1" aria-label="Page has been loaded successfully"></p>
+    <p id="page_loaded_msg" role="alert" aria-live="assertive" tabindex="-1"
+        aria-label="Page has been loaded successfully"></p>
     <div class="panel" id="panel">
         <table class="panel_layout">
             <tbody>
@@ -625,14 +683,22 @@
                             <div class="api_container normaltext">
                                 <p style="margin-top: 20px;">Ensure you're the only one who can access your account.</p>
                                 <p style="font-weight: bold; margin-top: 20px;">1. Install an authentication app</p>
-                                <a href="https://itunes.apple.com/au/app/google-authenticator/id388497605" target="_blank">
-                                    <img alt="Download the Google Authenticator app from App Store" src="https://wingtipb2ctmpls.blob.core.windows.net/wingtiptoys/images/apple-app-store.png">
+                                <a href="https://itunes.apple.com/au/app/google-authenticator/id388497605"
+                                    target="_blank">
+                                    <img alt="Download the Google Authenticator app from App Store"
+                                        src="https://wingtipb2ctmpls.blob.core.windows.net/wingtiptoys/images/apple-app-store.png">
                                 </a>
-                                <a class="auth-app-link" href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2" target="_blank">
-                                    <img alt="Download the Google Authenticator app from Play Store" src="https://wingtipb2ctmpls.blob.core.windows.net/wingtiptoys/images/google-play-store.png">
+                                <a class="auth-app-link"
+                                    href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2"
+                                    target="_blank">
+                                    <img alt="Download the Google Authenticator app from Play Store"
+                                        src="https://wingtipb2ctmpls.blob.core.windows.net/wingtiptoys/images/google-play-store.png">
                                 </a>
-                                <a class="auth-app-link" href="https://www.microsoft.com/en-AU/store/apps/Authenticator/9WZDNCRFJ3RJ" target="_blank">
-                                    <img alt="Download the Authenticator app from Windows Store" src="https://wingtipb2ctmpls.blob.core.windows.net/wingtiptoys/images/microsoft-windows-store.png">
+                                <a class="auth-app-link"
+                                    href="https://www.microsoft.com/en-AU/store/apps/Authenticator/9WZDNCRFJ3RJ"
+                                    target="_blank">
+                                    <img alt="Download the Authenticator app from Windows Store"
+                                        src="https://wingtipb2ctmpls.blob.core.windows.net/wingtiptoys/images/microsoft-windows-store.png">
                                 </a>
                                 <p style="font-weight: bold; margin-top: 20px;">2. Scan this barcode</p>
                                 <img id="strongAuthenticationAppQRCodeBitmapImage" src="">
@@ -649,7 +715,8 @@
     </div>
     <script>"use strict"; $(document).ready(function () { if (navigator.userAgent.match(/IEMobile\/10\.0/)) { var t = document.createElement("style"); t.appendChild(document.createTextNode("@@-ms-viewport{width:auto!important}")), t.appendChild(document.createTextNode("@@-ms-viewport{height:auto!important}")), document.getElementsByTagName("head")[0].appendChild(t) } if (navigator.userAgent.match(/MSIE 10/i)) { var e = $("#footer_links_container"); $(e).css("padding-top", "100px") } var o, i = $("#background_background_image"), n = function () { document.body.style.overflow = "hidden", ($(window).width() - 500) / $(window).height() < o ? (i.height($(window).height()), i.width("auto")) : (i.width($(window).width() - 500), i.height("auto")), document.body.style.overflow = "" }; $("<img>").attr("src", i.attr("src")).load(function () { o = this.width / this.height, n() }), $(window).resize(function () { n() }), "undefined" != typeof $("#MicrosoftAccountExchange") && $("#MicrosoftAccountExchange").text("Microsoft"), $("*").removeAttr("placeholder") });</script>
     <script>
-        $(function () {
+        "use strict";
+        $(document).ready(function () {
             var $strongAuthenticationAppQRCodeBitmapImage = $('#strongAuthenticationAppQRCodeBitmapImage');
             var $strongAuthenticationAppQRCodeBitmapTextInput = $('#strongAuthenticationAppQRCodeBitmap');
             $strongAuthenticationAppQRCodeBitmapImage.attr('src', 'data:image/png;base64,' + $strongAuthenticationAppQRCodeBitmapTextInput.val());
@@ -657,4 +724,5 @@
         });
     </script>
 </body>
+
 </html>
