@@ -6,9 +6,7 @@
   PolicySchemaVersion="0.3.0.0"
   TenantId="{{tenantId}}"
   PolicyId="B2C_1A_TOTP_TrustFrameworkExtensions"
-  PublicPolicyUri="http://{{tenantId}}/B2C_1A_TOTP_TrustFrameworkExtensions"
-    DeploymentMode="Development"
- UserJourneyRecorderEndpoint="urn:journeyrecorder:applicationinsights">
+  PublicPolicyUri="http://{{tenantId}}/B2C_1A_TOTP_TrustFrameworkExtensions">
 
   <BasePolicy>
     <TenantId>{{tenantId}}</TenantId>

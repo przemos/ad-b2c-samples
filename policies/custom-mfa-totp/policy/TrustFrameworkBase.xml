@@ -6,9 +6,7 @@
   PolicySchemaVersion="0.3.0.0"
   TenantId="testingmfalikeapro.onmicrosoft.com"
   PolicyId="B2C_1A_TOTP_TrustFrameworkBase"
-  PublicPolicyUri="http://{{tenantId}}/B2C_1A_TOTP_TrustFrameworkBase"
-    DeploymentMode="Development"
- UserJourneyRecorderEndpoint="urn:journeyrecorder:applicationinsights">
+  PublicPolicyUri="http://{{tenantId}}/B2C_1A_TOTP_TrustFrameworkBase">
 
   <BuildingBlocks>
     <ClaimsSchema>
