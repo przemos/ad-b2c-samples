@@ -4,14 +4,14 @@
   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
   xmlns="http://schemas.microsoft.com/online/cpim/schemas/2013/06"
   PolicySchemaVersion="0.3.0.0"
-  TenantId="testingmfalikeapro.onmicrosoft.com"
+  TenantId="{{tenantId}}"
   PolicyId="B2C_1A_TOTP_TrustFrameworkExtensions"
-  PublicPolicyUri="http://testingmfalikeapro.onmicrosoft.com/B2C_1A_TOTP_TrustFrameworkExtensions"
+  PublicPolicyUri="http://{{tenantId}}/B2C_1A_TOTP_TrustFrameworkExtensions"
     DeploymentMode="Development"
  UserJourneyRecorderEndpoint="urn:journeyrecorder:applicationinsights">
 
   <BasePolicy>
-    <TenantId>testingmfalikeapro.onmicrosoft.com</TenantId>
+    <TenantId>{{tenantId}}</TenantId>
     <PolicyId>B2C_1A_TOTP_TrustFrameworkBase</PolicyId>
   </BasePolicy>
   <BuildingBlocks>
@@ -52,7 +52,7 @@
       Note: the paged run JavaScript. Use custom or shared domain to allow running client side code -->
       <ContentDefinition Id="api.selfasserted.appfactor.registration">
         <!--<LoadUri>~/tenant/default/selfasserted.cshtml</LoadUri>-->
-        <LoadUri>https://5acafddb.ngrok.io/selfasserted-appfactor-registration.html</LoadUri>
+        <LoadUri>https://{{yourcustomserverhost}}/selfasserted-appfactor-registration.html</LoadUri>
         <RecoveryUri>~/common/default_page_error.html</RecoveryUri>
         <DataUri>urn:com:microsoft:aad:b2c:elements:contract:selfasserted:1.1.0</DataUri>
         <Metadata>
@@ -73,7 +73,7 @@
           <DisplayName>Generate TOTP Web Hook Azure Function</DisplayName>
           <Protocol Name="Proprietary" Handler="Web.TPEngine.Providers.RestfulProvider, Web.TPEngine, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
           <Metadata>
-            <Item Key="ServiceUrl">https://5acafddb.ngrok.io/api/identity/Generate</Item>
+            <Item Key="ServiceUrl">https://{{yourcustomserverhost}}/api/identity/Generate</Item>
             <Item Key="AuthenticationType">None</Item>
             <Item Key="SendClaimsIn">Body</Item>
             <Item Key="AllowInsecureAuthInProduction">true</Item>
@@ -94,7 +94,7 @@
           <DisplayName>Verify TOTP Web Hook Azure Function</DisplayName>
           <Protocol Name="Proprietary" Handler="Web.TPEngine.Providers.RestfulProvider, Web.TPEngine, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
           <Metadata>
-            <Item Key="ServiceUrl">https://5acafddb.ngrok.io/api/identity/verify</Item>
+            <Item Key="ServiceUrl">https://{{yourcustomserverhost}}/api/identity/verify</Item>
             <Item Key="AuthenticationType">None</Item>
             <Item Key="SendClaimsIn">Body</Item>
             <Item Key="AllowInsecureAuthInProduction">true</Item>
@@ -122,8 +122,8 @@
                 For more information: https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-create-custom-attributes-profile-edit-custom 
                 Action required: Insert objectId and appId here -->
           <Metadata>
-            <Item Key="ApplicationObjectId">ebe80e79-ff8a-4188-ba6e-e9e66cdbde2c</Item>
-            <Item Key="ClientId">ea7d26d0-197f-445c-849c-a0baeb27be0c</Item>
+            <Item Key="ApplicationObjectId">{{b2c_app_object_id}}</Item>
+            <Item Key="ClientId">{{b2c_app_application_client_id}}</Item>
           </Metadata>
         </TechnicalProfile>
 
@@ -235,17 +235,17 @@
         <TechnicalProfile Id="login-NonInteractive">
           <Metadata>
             <!--Demo action required: Change to your ProxyIdentityExperienceFramework App Id-->
-            <Item Key="client_id">156ec76d-cb16-4bef-8001-84388ca04b38</Item>
+            <Item Key="client_id">{{ProxyIdentityExperienceFramework_app_id}}</Item>
 
             <!--Demo action required: Change to your IdentityExperienceFramework App Id-->
-            <Item Key="IdTokenAudience">3766cf51-f09d-4ad8-86e8-427881fde3ef</Item>
+            <Item Key="IdTokenAudience">{{IdentityExperienceFramework_app_id}}</Item>
           </Metadata>
           <InputClaims>
             <!--Demo action required: Change to your ProxyIdentityExperienceFramework App Id-->
-            <InputClaim ClaimTypeReferenceId="client_id" DefaultValue="156ec76d-cb16-4bef-8001-84388ca04b38" />
+            <InputClaim ClaimTypeReferenceId="client_id" DefaultValue="{{ProxyIdentityExperienceFramework_app_id}}" />
 
             <!--Demo action required: Change to your IdentityExperienceFramework App Id-->
-            <InputClaim ClaimTypeReferenceId="resource_id" PartnerClaimType="resource" DefaultValue="3766cf51-f09d-4ad8-86e8-427881fde3ef" />
+            <InputClaim ClaimTypeReferenceId="resource_id" PartnerClaimType="resource" DefaultValue="{{IdentityExperienceFramework_app_id}}" />
           </InputClaims>
         </TechnicalProfile>
       </TechnicalProfiles>
