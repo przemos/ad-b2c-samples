@@ -18,7 +18,7 @@
   <RelyingParty>
     <DefaultUserJourney ReferenceId="SignUpOrSignIn" />
     <UserJourneyBehaviors>
-          <JourneyInsights TelemetryEngine="ApplicationInsights" InstrumentationKey="{{insights_impl_key}} DeveloperMode="true" ClientEnabled="false" ServerEnabled="true" TelemetryVersion="1.0.0" />
+          <JourneyInsights TelemetryEngine="ApplicationInsights" InstrumentationKey="{{insights_instr_key}} DeveloperMode="true" ClientEnabled="false" ServerEnabled="true" TelemetryVersion="1.0.0" />
       <!-- Demo: Allow JavaScript execution in the relying party policy-->
       <ScriptExecution>Allow</ScriptExecution>
 
